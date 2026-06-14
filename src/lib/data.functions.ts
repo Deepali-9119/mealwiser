@@ -57,17 +57,14 @@ export const getActivePlan = createServerFn({ method: "GET" })
       supabase.from("weekly_stats").select("*").eq("user_id", userId).eq("week_start", plan.week_start).maybeSingle(),
     ]);
 
-    let items: unknown[] = [];
-    let deliveries: unknown[] = [];
-    if (basket) {
-      const [{ data: i }, { data: d }] = await Promise.all([
-        supabase.from("basket_items").select("*").eq("basket_id", basket.id).order("category"),
-        supabase.from("delivery_schedules").select("*").eq("basket_id", basket.id).order("slot_date"),
-      ]);
-      items = i ?? [];
-      deliveries = d ?? [];
+    if (!basket) {
+      return { plan, meals: meals ?? [], basket: null, items: [], deliveries: [], stats };
     }
-    return { plan, meals: meals ?? [], basket, items, deliveries, stats };
+    const [{ data: items }, { data: deliveries }] = await Promise.all([
+      supabase.from("basket_items").select("*").eq("basket_id", basket.id).order("category"),
+      supabase.from("delivery_schedules").select("*").eq("basket_id", basket.id).order("slot_date"),
+    ]);
+    return { plan, meals: meals ?? [], basket, items: items ?? [], deliveries: deliveries ?? [], stats };
   });
 
 export const getPlanHistory = createServerFn({ method: "GET" })

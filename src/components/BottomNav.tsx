@@ -2,13 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { Home, CalendarDays, ShoppingBasket, Truck, BarChart3 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const tabs = [
+type Tab = { to: string; label: string; icon: typeof Home; exact?: boolean };
+const tabs: Tab[] = [
   { to: "/app", label: "Home", icon: Home, exact: true },
   { to: "/app/plan", label: "Plan", icon: CalendarDays },
   { to: "/app/groceries", label: "Basket", icon: ShoppingBasket },
   { to: "/app/deliveries", label: "Drops", icon: Truck },
   { to: "/app/dashboard", label: "Stats", icon: BarChart3 },
-] as const;
+];
 
 export function BottomNav() {
   return (
