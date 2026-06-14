@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 
 type Tab = { to: string; label: string; icon: typeof Home; exact?: boolean };
 const tabs: Tab[] = [
-  { to: "/app", label: "Home", icon: Home, exact: true },
-  { to: "/app/plan", label: "Plan", icon: CalendarDays },
-  { to: "/app/groceries", label: "Basket", icon: ShoppingBasket },
-  { to: "/app/deliveries", label: "Drops", icon: Truck },
-  { to: "/app/dashboard", label: "Stats", icon: BarChart3 },
+  { to: "/", label: "Home", icon: Home, exact: true },
+  { to: "/plan", label: "Plan", icon: CalendarDays },
+  { to: "/groceries", label: "Basket", icon: ShoppingBasket },
+  { to: "/deliveries", label: "Drops", icon: Truck },
+  { to: "/dashboard", label: "Stats", icon: BarChart3 },
 ];
 
 export function BottomNav() {
