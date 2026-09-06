@@ -1,161 +1,51 @@
-# Blinkit Meal Genie
+## 🎯 Product Thinking & PM Insights
 
-Build a production-ready Blinkit feature called "AI Weekly Meal Planner".
+### User Journey
 
-Product Vision:
-Transform Blinkit from a quick-commerce grocery app into a proactive healthy meal planning assistant.
+> **Set Preferences → AI Creates Weekly Plan → Groceries Auto-Generated → Deliveries Scheduled → Cook with Guided Mode → Track Progress**
 
-Target User:
-Busy professionals who want healthy eating without spending time planning meals or managing groceries.
+### Proposed Product Metrics
 
-Core User Journey:
-User sets preferences → AI creates weekly meal plan → groceries automatically generated → deliveries intelligently scheduled → cook follows daily plan → user tracks progress.
+The following KPIs are proposed for evaluating the feature after launch. **No production performance data was collected for this prototype.**
 
-Required MVP Features:
+- **Planner Activation Rate**: % of users who create their first meal plan
+- **Weekly Order Frequency**: Average orders per user per week
+- **Repeat Purchase Rate**: % of users who reorder through meal plans
+- **Meal Plan Completion Rate**: % of planned meals actually cooked
+- **Grocery Utilization Rate**: % of purchased groceries actually used
 
-Authentication:
+### Scope Decisions (MVP)
 
-Existing Blinkit login system
+Intentionally excluded from MVP to keep scope focused:
 
-Reuse existing user profile
+- Calorie tracking
+- Fitness integrations
+- Community/social features
+- AI nutrition coaching
 
-Meal Planning Engine:
+### Design Principles
 
-Generate weekly meal plans
+- **Mobile-first**: Responsive design following the visual direction explored for the prototype
+- **Minimal clicks**: Streamlined onboarding and navigation
+- **Accessibility as a design consideration**: Attention to contrast, spacing, and touch targets
 
-Dietary preferences
+---
 
-Cuisine preferences
+## 🛠️ Prototype & Implementation
 
-Health goals
+MealWiser was developed as an AI-assisted product prototype using **Lovable**.
 
-Meal variety optimization
+The prototype focuses on exploring the product experience, user flow, feature structure, and interaction design rather than representing a production implementation.
 
-Meal replacement suggestions
+---
 
-Smart Grocery Generator:
+## 📝 What I Learned
 
-Automatically generate ingredients
+- **Product scoping**: Defining clear MVP boundaries while maintaining a compelling product vision
+- **User-centric design**: Mapping the full user journey from preference setting to cooking
+- **Metric-driven thinking**: Defining KPIs that connect product usage with potential business outcomes
+- **Feature prioritization**: Using clear out-of-scope decisions to maintain focus and avoid feature creep
 
-Calculate quantities
+---
 
-Avoid over-ordering
-
-Detect duplicate ingredients
-
-Optimize basket value
-
-Delivery Intelligence:
-
-Split grocery orders across week
-
-Recommend freshness-based delivery schedules
-
-Allow rescheduling
-
-Cook Mode:
-
-Daily meal view
-
-Recipe instructions
-
-Ingredient checklist
-
-Shareable meal plan
-
-Dashboard:
-
-Weekly meals completed
-
-Grocery utilization
-
-Healthy streak tracking
-
-Food waste reduction estimate
-
-Weekly planning history
-
-Notifications:
-
-Meal reminders
-
-Grocery replenishment alerts
-
-Delivery reminders
-
-Weekly planning prompts
-
-Data Models:
-User
-Preferences
-MealPlan
-Meal
-Ingredient
-GroceryBasket
-DeliverySchedule
-WeeklyStats
-
-Design Requirements:
-
-Match Blinkit branding exactly
-
-Mobile-first responsive design
-
-Fast loading
-
-Accessibility compliant
-
-Simple onboarding
-
-Minimal clicks
-
-Consistent navigation
-
-Primary KPIs:
-
-Planner activation rate
-
-Weekly order frequency
-
-Repeat purchase rate
-
-Meal plan completion rate
-
-Grocery utilization rate
-
-Out of Scope (MVP):
-
-Calorie tracking
-
-Fitness integrations
-
-Community features
-
-Social sharing
-
-AI nutrition coaching
-
-Build complete frontend, backend structure, database schema, reusable components, API architecture, state management, and production-ready user flows.
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://mealwiser.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/f5656ad1-d9fa-449a-bb30-6acc5491f6a8).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+*Built by [Deepali Shah](https://github.com/Deepali-9119) · Aspiring Product Manager | AI Product Builder*
